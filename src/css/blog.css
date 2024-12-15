@@ -16,6 +16,7 @@
   grid-template-columns: 1fr;
 }
 
+
 .post > a {
   position: relative;
   color: var(--common-white);
@@ -124,13 +125,6 @@
   background-color: var(--blue-light);
 }
 
-.footer-container{
-  display: grid;
-  grid-template-columns: 24px 1fr;
-  align-items: center;
-  gap: 8px
-}
-
 @media (min-width: 768px) {
   .posts {
     gap: 24px;
@@ -140,6 +134,23 @@
   .post:first-child {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+    position: relative; 
+    overflow: hidden; 
+    display: flex; 
+    align-items: stretch; 
+    border-radius: 16px;
+  }
+
+  .post:first-child picture {
+    display: flex; 
+    width: 100%; 
+    height: 100%; 
+  }
+
+  .post:first-child img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
   }
 
   .longread{
