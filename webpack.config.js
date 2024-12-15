@@ -8,6 +8,7 @@ module.exports = {
     filename: 'bundle.js', 
     path: path.resolve(__dirname, 'dist'), 
     clean: true, 
+    publicPath: './',
   },
 
   mode: 'development', 
@@ -21,6 +22,9 @@ module.exports = {
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/i, 
         type: 'asset/resource', 
+        generator: {
+          filename: 'img/[name][ext][query]', 
+        },
       },
       {
         test: /\.html$/,
